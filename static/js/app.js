@@ -5,11 +5,11 @@ app.config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider){
     $routeProvider
       .when('/', {
-        templateUrl: '/static/partials/index.html',
+        templateUrl: 'static/partials/index.html',
         controller: 'MainPageCtrl'
       })
       .otherwise({
-        templateUrl: '/static/partials/404.html',
+        templateUrl: 'static/partials/404.html',
         controller: 'Error404Ctrl'
       });
     /*$locationProvider.html5Mode({

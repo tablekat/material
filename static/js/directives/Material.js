@@ -6,7 +6,7 @@ app.directive("material", function(){
       material: '=',
       pop: '='
     },
-    templateUrl: '/static/partials/material.html',
+    templateUrl: 'static/partials/material.html',
     controller: 'MaterialCtrl'
   };
 });
