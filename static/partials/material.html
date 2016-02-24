@@ -1,0 +1,12 @@
+
+<div class="material"
+     ng-style="style"
+     ng-class="[class, popClass, deletedClass]"
+     ng-mousedown="mousedown($event)"
+     ng-mouseup="mouseup($event)"
+     ng-mousemove="mousemove($event)"
+     md-ink-ripple="#333333">
+  <div class="z-shower">
+   {{ $root.showZ ? material.z.toFixed(2) : ""}}
+ </div>
+</div>

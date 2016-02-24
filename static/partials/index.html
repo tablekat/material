@@ -1,0 +1,48 @@
+
+<div id="page"
+    ng-mousedown="mousedown($event)"
+    ng-mouseup="mouseup($event)"
+    ng-mousemove="mousemove($event)"
+    md-ink-ripple="#cacaca">
+  <material
+      ng-repeat="mat in materials"
+      material="mat">
+  </material>
+  <material
+      ng-if="trace"
+      material="trace"
+      pop="false">
+  </material>
+</div>
+
+<div class="color-picker-container md-whiteframe-24dp" ng-if="showColorPicker">
+  <div md-color-picker ng-model="fabtoolbar.color"></div>
+</div>
+
+<md-fab-toolbar md-open="fabtoolbar.isOpen" count="demo.count"
+                  md-direction="left">
+  <md-fab-trigger class="align-with-text">
+    <md-button aria-label="menu" class="md-fab md-primary">
+      <md-icon>menu</md-icon>
+    </md-button>
+  </md-fab-trigger>
+  <md-toolbar>
+    <md-fab-actions class="md-toolbar-tools">
+      <md-button aria-label="comment" class="md-icon-button">
+        <md-icon>menu</md-icon>
+      </md-button>
+      <md-button aria-label="label" class="md-icon-button">
+        <md-icon>favorite</md-icon>
+      </md-button>
+      <md-button aria-label="label" class="md-icon-button" ng-click="deleteAll()">
+        <md-icon>delete_forever</md-icon>
+      </md-button>
+      <md-button aria-label="photo" class="md-icon-button" ng-click="showColorPickerF($event)">
+        <md-icon>format_paint</md-icon>
+      </md-button>
+      <md-button aria-label="photo" class="md-icon-button" ng-click="$root.showZ = !$root.showZ">
+        <md-icon>filter_none</md-icon>
+      </md-button>
+    </md-fab-actions>
+  </md-toolbar>
+</md-fab-toolbar>
